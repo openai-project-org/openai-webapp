@@ -11,7 +11,7 @@ OPENAI_SERVICE_URL = f"http://{OPENAI_SERVICE_URL}" # rushane/webapp-image:1.2
 
 @app.route("/")
 def index():
-#    return OPENAI_SERVICE_URL
+#    return OPENAI_SERVICE_URL#
     return render_template("index.html")
 
 @app.route("/complete", methods=["GET", "POST"])

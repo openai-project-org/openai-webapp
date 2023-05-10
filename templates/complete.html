@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Complete with OpenAI</title>
+	<style type="text/css">
+		body {
+			background-color: #d4dfe5;
+		}
+	</style>
+</head>
+<body>
+	<h1>Complete with OpenAI</h1>
+	<form action="/complete" method="POST">
+		<label for="prompt">Enter a prompt:</label>
+		<input type="text" name="prompt" id="prompt" required>
+		<input type="submit" value="Submit">
+	</form>
+	{% if prompt %}
+		<p><strong>Prompt:</strong> {{ prompt }}</p>
+	{% endif %}
+	{% if response %}
+		<p><strong>Response:</strong> {{ response }}</p>
+	{% endif %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat with OpenAI</title>
+	<style type="text/css">
+		body {
+			background-color: #d4dfe5;
+		}
+		.container {
+			margin: 0 auto;
+			text-align: center;
+			border: 2px solid black;
+			padding: 20px;
+			width: 80%;
+			max-width: 600px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Chat with OpenAI</h1>
+	<form action="/chat" method="POST">
+		<label for="prompt">Say something:</label>
+		<input type="text" name="prompt" id="prompt" required>
+		<input type="submit" value="Submit">
+	</form>
+	{% if prompt %}
+		<p><strong>Prompt:</strong> {{ prompt }}</p>
+	{% endif %}
+	{% if response %}
+		<p><strong>Response:</strong> {{ response }}</p>
+	{% endif %}
+</body>
+</html>
